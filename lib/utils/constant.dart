@@ -1,5 +1,6 @@
 class AppConstant {
-  static const String moreDetailLink = 'https://apps.rajodiya.com/ecommercego-mobileapp/admin/login';
+  static const String moreDetailLink = 'https://ecom-demo.workdo.io/login';
+  static const String baseContactLink = 'https://ecom-demo.workdo.io';
   static const String contactLink = '/contact_us';
   static const String youtubeLink = 'https://www.youtube.com/';
   static const String messengerLink = 'https://www.messenger.com/';
