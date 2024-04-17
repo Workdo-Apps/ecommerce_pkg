@@ -59,7 +59,7 @@ class OrderDetail {
   String? delivery;
   String? deliveredCharge;
   dynamic couponInfo;
-  Tax? tax;
+  // Tax? tax;
   String? subTotal;
   String? finalPrice;
   String? taxPrice;
@@ -91,7 +91,7 @@ class OrderDetail {
     this.delivery,
     this.deliveredCharge,
     this.couponInfo,
-    this.tax,
+    // this.tax,
     this.subTotal,
     this.finalPrice,
     this.taxPrice,
@@ -124,7 +124,7 @@ class OrderDetail {
     delivery: json["delivery"],
     deliveredCharge: json["delivered_charge"],
     couponInfo: json["coupon_info"],
-    tax: json["tax"] == null ? null : Tax.fromJson(json["tax"]),
+    // tax: json["tax"] == null ? null : Tax.fromJson(json["tax"]),
     subTotal: json["sub_total"],
     finalPrice: json["final_price"],
     taxPrice: json["tax_price"],
@@ -157,7 +157,7 @@ class OrderDetail {
     "delivery": delivery,
     "delivered_charge": deliveredCharge,
     "coupon_info": couponInfo,
-    "tax": tax?.toJson(),
+    // "tax": tax?.toJson(),
     "sub_total": subTotal,
     "final_price": finalPrice,
     "tax_price": taxPrice,
