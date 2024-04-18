@@ -1,6 +1,7 @@
 class API {
   ///Auth
-  static String siteUrl = 'https://ecom-demo.workdo.io/api';
+  static String apiUrl = '/api';
+  static String siteUrl = '';
   static String baseUrl = '';
   static String loginUrl = '/login';
   static String forgotPasswordVerifyOtpUrl = '/forgot-password-verify-otp';
@@ -37,7 +38,6 @@ class API {
   static String deliveryListUrl = '/delivery-list';
   static String deliveryChargeUrl = '/delivery-charge';
   static String orderSaveUrl = '/order-save';
-  // static String confirmOrderUrl = '/confirm-order'; //pending
 
   ///category
   static String tagListUrl = '/category-list';
@@ -65,5 +65,4 @@ class API {
   static String updateAddressUrl = '/update-address';
   static String deleteAddressUrl = '/delete-address';
   static String loyaltyProgramJsonUrl = '/loyality-program-json';
-  static String a = '';
 }

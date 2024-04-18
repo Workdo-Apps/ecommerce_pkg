@@ -9,9 +9,10 @@ import 'dart:convert';
 
 class AuthRepository {
   Future getBaseUrlData({
+    required String siteUrl,
     required String storeName,
   }) async {
-    var url = Uri.parse(API.siteUrl + storeName);
+    var url = Uri.parse(siteUrl + API.apiUrl + storeName);
     print("url------->$url");
     var response = await http.post(url);
     print('Response status: ${response.statusCode}');

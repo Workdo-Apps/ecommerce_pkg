@@ -1,13 +1,14 @@
+import 'package:ecommerce_pkg/utils/base_api.dart';
+
 class AppConstant {
-  static const String moreDetailLink = 'https://ecom-demo.workdo.io/login';
-  static const String baseContactLink = 'https://ecom-demo.workdo.io';
+  static  String moreDetailLink = '${API.siteUrl}/login';
+  static  String baseContactLink = API.siteUrl;
   static const String contactLink = '/contact_us';
   static const String youtubeLink = 'https://www.youtube.com/';
   static const String messengerLink = 'https://www.messenger.com/';
   static const String twitterLink = 'https://twitter.com/rajodiya1';
   static const String instagramLink = 'https://www.instagram.com/rajodiyainfo/?hl=en';
-  static const String termLink = 'https://www.babycareinc.net/terms-of-use';
-  static const String loyaltyLink = 'https://ecom-demo.workdo.io';
+  static  String loyaltyLink = API.siteUrl;
 
   static const String selectTermsCondition = "Please select terms and condition";
   static const String enterPromoCode = "Please enter promo-code.";
