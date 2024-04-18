@@ -10,7 +10,6 @@ class AppConstant {
   static const String instagramLink = 'https://www.instagram.com/';
   static  String loyaltyLink = API.siteUrl;
 
-  static const String selectTermsCondition = "Please select terms and condition";
   static const String enterPromoCode = "Please enter promo-code.";
   static String dataNotFound = 'Data not found';
   static String wishlistDataNotFound = 'Your wishlist is empty';
