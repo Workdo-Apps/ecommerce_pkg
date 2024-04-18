@@ -6,8 +6,8 @@ class AppConstant {
   static const String contactLink = '/contact_us';
   static const String youtubeLink = 'https://www.youtube.com/';
   static const String messengerLink = 'https://www.messenger.com/';
-  static const String twitterLink = 'https://twitter.com/rajodiya1';
-  static const String instagramLink = 'https://www.instagram.com/rajodiyainfo/?hl=en';
+  static const String twitterLink = 'https://twitter.com/';
+  static const String instagramLink = 'https://www.instagram.com/';
   static  String loyaltyLink = API.siteUrl;
 
   static const String selectTermsCondition = "Please select terms and condition";
