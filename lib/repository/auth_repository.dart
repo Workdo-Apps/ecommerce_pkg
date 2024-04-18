@@ -14,6 +14,7 @@ class AuthRepository {
   }) async {
     var url = Uri.parse(siteUrl + API.apiUrl + storeName);
     print("url------->$url");
+    API.siteUrl = siteUrl;
     var response = await http.post(url);
     print('Response status: ${response.statusCode}');
     print('Response body-----?: ${response.body}');
