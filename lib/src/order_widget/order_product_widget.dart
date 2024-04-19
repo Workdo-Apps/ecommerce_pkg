@@ -68,6 +68,8 @@ class OrderProductWidget extends StatelessWidget {
                       child: Text(
                         productName!,
                         style: pSemiBold14.copyWith(color: textColor ?? AppColor.cWhite),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     Text(
