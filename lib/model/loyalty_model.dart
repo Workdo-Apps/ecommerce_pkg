@@ -165,7 +165,7 @@ class HistoryData {
   String? deliveryPrice;
   String? taxPrice;
   String? finalPrice;
-  double? returnPrice;
+  // double? returnPrice;
   String? paymentComment;
   String? paymentType;
   String? paymentStatus;
@@ -204,7 +204,7 @@ class HistoryData {
     this.deliveryPrice,
     this.taxPrice,
     this.finalPrice,
-    this.returnPrice,
+    // this.returnPrice,
     this.paymentComment,
     this.paymentType,
     this.paymentStatus,
@@ -244,7 +244,7 @@ class HistoryData {
         deliveryPrice: json["delivery_price"].toString(),
         taxPrice: json["tax_price"].toString(),
         finalPrice: json["final_price"],
-        returnPrice: double.parse(json["return_price"].toString()),
+        // returnPrice: double.parse(json["return_price"].toString()),
         paymentComment: json["payment_comment"],
         paymentType: json["payment_type"],
         paymentStatus: json["payment_status"],
@@ -284,7 +284,7 @@ class HistoryData {
         "delivery_price": deliveryPrice,
         "tax_price": taxPrice,
         "final_price": finalPrice,
-        "return_price": returnPrice,
+        // "return_price": returnPrice,
         "payment_comment": paymentComment,
         "payment_type": paymentType,
         "payment_status": paymentStatus,
