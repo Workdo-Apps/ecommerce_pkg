@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:easy_debounce/easy_debounce.dart';
+import 'package:easy_debounce/easy_throttle.dart';
 import 'package:ecommerce_pkg/utils/colors.dart';
 import 'package:ecommerce_pkg/utils/text_style.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +36,12 @@ class CommonButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
+      // onTap: onPressed,
+      onTap: () {
+        EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), () {
+          onPressed!();
+        });
+      },
       child: Container(
         width: width ?? Get.width,
         // height: height ?? Get.height * 0.07,
