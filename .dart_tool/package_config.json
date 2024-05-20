@@ -80,12 +80,6 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "easy_debounce",
-      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/easy_debounce-2.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "facebook_auth_desktop",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/facebook_auth_desktop-1.0.3",
       "packageUri": "lib/",
@@ -632,12 +626,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "throttling",
-      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/throttling-2.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "typed_data",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
@@ -758,7 +746,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-20T06:14:21.234512Z",
+  "generated": "2024-05-20T07:52:38.657252Z",
   "generator": "pub",
   "generatorVersion": "3.4.0",
   "flutterRoot": "file:///Users/mac/Documents/FLUTTER/Flutter%20set%20up/soft_sdk/flutter_macos_3.16.9-stable/flutter",

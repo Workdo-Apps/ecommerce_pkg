@@ -1,12 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:easy_debounce/easy_debounce.dart';
-import 'package:easy_debounce/easy_throttle.dart';
+import 'package:async/async.dart';
 import 'package:ecommerce_pkg/utils/colors.dart';
 import 'package:ecommerce_pkg/utils/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:throttling/throttling.dart';
 
 class CommonButton extends StatelessWidget {
   final String? title;
@@ -20,7 +18,7 @@ class CommonButton extends StatelessWidget {
   final Color? textColor;
   final double? radius;
 
-  const CommonButton({
+   CommonButton({
     super.key,
     this.title,
     this.height,
@@ -34,24 +32,17 @@ class CommonButton extends StatelessWidget {
     this.radius,
   });
 
+  final AsyncMemoizer _memoizer = AsyncMemoizer();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: onPressed,
       onTap: () async {
-        // EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), onPressed!);
-        final thr = Throttling<void>(duration: const Duration(milliseconds: 300));
-        // await Future<void>.delayed(const Duration(milliseconds: 100));
-        // thr.throttle(onPressed!);
-
-        final sub = thr.listen((state) {
-          print(' * throttling is '
-              '${state.isIdle ? 'ready' : 'busy'}');
-          state.isIdle ? onPressed : null;
+        _memoizer.runOnce(() async {
+          await Future.delayed(Duration(milliseconds: 300));
+          print("Button pressed");
+          onPressed!();
         });
-        await sub.cancel();
-        thr.close();
-        print("sub----${sub}");
       },
       child: Container(
         width: width ?? Get.width,
