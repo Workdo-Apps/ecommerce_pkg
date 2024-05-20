@@ -632,6 +632,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "throttling",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/throttling-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "typed_data",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
@@ -752,7 +758,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-20T05:10:23.069774Z",
+  "generated": "2024-05-20T06:14:21.234512Z",
   "generator": "pub",
   "generatorVersion": "3.4.0",
   "flutterRoot": "file:///Users/mac/Documents/FLUTTER/Flutter%20set%20up/soft_sdk/flutter_macos_3.16.9-stable/flutter",

@@ -6,6 +6,7 @@ import 'package:ecommerce_pkg/utils/colors.dart';
 import 'package:ecommerce_pkg/utils/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:throttling/throttling.dart';
 
 class CommonButton extends StatelessWidget {
   final String? title;
@@ -37,10 +38,11 @@ class CommonButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       // onTap: onPressed,
-      onTap: () {
-        EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), () {
-          onPressed!();
-        });
+      onTap: () async {
+        // EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), onPressed!);
+        final thr = Throttling<void>(duration: const Duration(milliseconds: 300));
+        await Future<void>.delayed(const Duration(milliseconds: 100));
+        thr.throttle(onPressed!);
       },
       child: Container(
         width: width ?? Get.width,
