@@ -41,8 +41,14 @@ class CommonButton extends StatelessWidget {
       onTap: () async {
         // EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), onPressed!);
         final thr = Throttling<void>(duration: const Duration(milliseconds: 300));
-        await Future<void>.delayed(const Duration(milliseconds: 100));
-        thr.throttle(onPressed!);
+        // await Future<void>.delayed(const Duration(milliseconds: 100));
+        // thr.throttle(onPressed!);
+        final sub = thr.listen((state) {
+          print(' * throttling is '
+              '${state.isIdle ? 'ready' : 'busy'}');
+          state.isIdle ? onPressed : null;
+        });
+        print("sub----$sub");
       },
       child: Container(
         width: width ?? Get.width,
