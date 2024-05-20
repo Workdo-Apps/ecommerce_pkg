@@ -1,6 +1,7 @@
 // TODO Implement this library.
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
+import 'package:easy_debounce/easy_throttle.dart';
 import 'package:ecommerce_pkg/widget/common_space_divider_widget.dart';
 import 'package:ecommerce_pkg/widget/icon_and_image.dart';
 import 'package:ecommerce_pkg/utils/text_style.dart';
