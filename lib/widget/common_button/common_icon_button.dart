@@ -35,8 +35,11 @@ class CommonIconBorderButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
-      child: Container(
+      onTap: () {
+        EasyThrottle.throttle('scroll-throttle', Duration(milliseconds: 200), () {
+          onPressed!();
+        });
+      },      child: Container(
         width: width ?? Get.width,
         // height: height ?? Get.height * 0.07,
         height: height ?? 43,
