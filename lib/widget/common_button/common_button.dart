@@ -43,12 +43,15 @@ class CommonButton extends StatelessWidget {
         final thr = Throttling<void>(duration: const Duration(milliseconds: 300));
         // await Future<void>.delayed(const Duration(milliseconds: 100));
         // thr.throttle(onPressed!);
+
         final sub = thr.listen((state) {
           print(' * throttling is '
               '${state.isIdle ? 'ready' : 'busy'}');
           state.isIdle ? onPressed : null;
         });
-        print("sub----$sub");
+        await sub.cancel();
+        thr.close();
+        print("sub----${sub}");
       },
       child: Container(
         width: width ?? Get.width,
