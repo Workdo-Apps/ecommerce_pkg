@@ -33,18 +33,10 @@ class CommonIconBorderButton extends StatelessWidget {
     this.textColor,
   });
 
-  final AsyncMemoizer _memoizer = AsyncMemoizer();
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () async {
-        _memoizer.runOnce(() async {
-          await Future.delayed(Duration(milliseconds: 300));
-          print("Button pressed");
-          onPressed!();
-        });
-      },
+      onTap: onPressed,
       child: Container(
         width: width ?? Get.width,
         // height: height ?? Get.height * 0.07,
