@@ -243,7 +243,7 @@ class HistoryData {
         couponPrice: json["coupon_price"].toString(),
         deliveryPrice: json["delivery_price"].toString(),
         taxPrice: json["tax_price"].toString(),
-        finalPrice: json["final_price"],
+        finalPrice: json["final_price"].toString(),
         // returnPrice: double.parse(json["return_price"].toString()),
         paymentComment: json["payment_comment"],
         paymentType: json["payment_type"],
